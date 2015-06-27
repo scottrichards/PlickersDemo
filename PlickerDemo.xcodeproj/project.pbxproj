@@ -20,6 +20,8 @@
 		0163B20C1B3EFB0900F267E6 /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B20B1B3EFB0900F267E6 /* TestData.m */; };
 		0163B2101B3F090900F267E6 /* QuestionDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B20F1B3F090900F267E6 /* QuestionDataTableViewCell.m */; };
 		0168DBC31B3F11A700973F7F /* ResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBC21B3F11A700973F7F /* ResponseObject.m */; };
+		0168DBC61B3F21F600973F7F /* QuestionResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */; };
+		0168DBC91B3F235400973F7F /* QuestionResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBC81B3F235400973F7F /* QuestionResultsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		0163B20F1B3F090900F267E6 /* QuestionDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionDataTableViewCell.m; path = TableViewCells/QuestionDataTableViewCell.m; sourceTree = "<group>"; };
 		0168DBC11B3F11A700973F7F /* ResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponseObject.h; path = Model/ResponseObject.h; sourceTree = "<group>"; };
 		0168DBC21B3F11A700973F7F /* ResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponseObject.m; path = Model/ResponseObject.m; sourceTree = "<group>"; };
+		0168DBC41B3F21F600973F7F /* QuestionResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionResultsTableViewController.h; path = ViewControllers/QuestionResultsTableViewController.h; sourceTree = "<group>"; };
+		0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionResultsTableViewController.m; path = ViewControllers/QuestionResultsTableViewController.m; sourceTree = "<group>"; };
+		0168DBC71B3F235400973F7F /* QuestionResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionResultsTableViewCell.h; path = TableViewCells/QuestionResultsTableViewCell.h; sourceTree = "<group>"; };
+		0168DBC81B3F235400973F7F /* QuestionResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionResultsTableViewCell.m; path = TableViewCells/QuestionResultsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,8 @@
 			children = (
 				0163B2071B3EFAB000F267E6 /* QuestionDataTableViewController.h */,
 				0163B2081B3EFAB000F267E6 /* QuestionDataTableViewController.m */,
+				0168DBC41B3F21F600973F7F /* QuestionResultsTableViewController.h */,
+				0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +185,8 @@
 			children = (
 				0163B20E1B3F090900F267E6 /* QuestionDataTableViewCell.h */,
 				0163B20F1B3F090900F267E6 /* QuestionDataTableViewCell.m */,
+				0168DBC71B3F235400973F7F /* QuestionResultsTableViewCell.h */,
+				0168DBC81B3F235400973F7F /* QuestionResultsTableViewCell.m */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -287,8 +297,10 @@
 				0163B2101B3F090900F267E6 /* QuestionDataTableViewCell.m in Sources */,
 				0168DBC31B3F11A700973F7F /* ResponseObject.m in Sources */,
 				0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */,
+				0168DBC91B3F235400973F7F /* QuestionResultsTableViewCell.m in Sources */,
 				0163B1A31B3E2E7500F267E6 /* main.m in Sources */,
 				0163B2091B3EFAB000F267E6 /* QuestionDataTableViewController.m in Sources */,
+				0168DBC61B3F21F600973F7F /* QuestionResultsTableViewController.m in Sources */,
 				0163B20C1B3EFB0900F267E6 /* TestData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

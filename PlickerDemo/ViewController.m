@@ -11,6 +11,7 @@
 #import "QuestionData.h"
 #import "TestData.h"
 #import "QuestionDataTableViewController.h"
+#import "QuestionResultsTableViewController.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) // Background thread constant for convenience
 #define kPlickersJSONData [NSURL URLWithString:@"http://plickers-interview.herokuapp.com/polls"] // link to plickers json data source
@@ -60,6 +61,9 @@
     if ([segue.identifier isEqualToString:@"toQuestionData"]) {
         QuestionDataTableViewController *questionDataController = [segue destinationViewController];
         questionDataController.testData = _testData;
+    } else if ([segue.identifier isEqualToString:@"toQuestionResults"]) {
+        QuestionResultsTableViewController *questionResultsController = [segue destinationViewController];
+        questionResultsController.testData = _testData;
     }
 }
 
