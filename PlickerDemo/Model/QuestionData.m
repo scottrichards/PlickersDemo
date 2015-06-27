@@ -24,4 +24,9 @@
             return @"";
     }
 }
+
+-(BOOL)isAnswerCorrect:(NSString *)answer
+{
+    return [answer isEqualToString:[self getMultipleChoiceAnswer]];
+}
 @end

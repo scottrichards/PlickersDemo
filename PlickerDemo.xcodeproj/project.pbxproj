@@ -155,10 +155,10 @@
 			children = (
 				0163B1CE1B3EF52400F267E6 /* QuestionData.h */,
 				0163B1CF1B3EF52400F267E6 /* QuestionData.m */,
-				0163B20A1B3EFB0900F267E6 /* TestData.h */,
-				0163B20B1B3EFB0900F267E6 /* TestData.m */,
 				0168DBC11B3F11A700973F7F /* ResponseObject.h */,
 				0168DBC21B3F11A700973F7F /* ResponseObject.m */,
+				0163B20A1B3EFB0900F267E6 /* TestData.h */,
+				0163B20B1B3EFB0900F267E6 /* TestData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";

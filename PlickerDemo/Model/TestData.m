@@ -24,8 +24,8 @@ const int kUnspecifiedValue = -1;
     for (NSDictionary *item in jsonArray) {
         NSLog(@"item: %@",item);
         NSDictionary *question = item[@"question"];
+        QuestionData *questionData = [QuestionData new];
         if (question) {
-            QuestionData *questionData = [QuestionData new];
             questionData.body = question[@"body"];
             questionData.answer = kUnspecifiedValue;
             // parse the choices for each question and identify the correct answer
@@ -42,19 +42,30 @@ const int kUnspecifiedValue = -1;
                     }
                 }
             }
-            NSArray *responses = question[@"responses"];
-            if (responses) {
-                for (NSDictionary *response in responses) {
-                    
-                    NSLog(@"Student: %@ Answer: %@",response[@"student"],response[@"answer"]);
-                }
-            }
-            _questions[questionNumber++] = questionData;
         }
+        NSArray *responses = item[@"responses"];
+        if (responses) {
+            questionData.numResponses = [responses count];
+            for (NSDictionary *response in responses) {
+                BOOL isCorrect;
+                NSString *studentAnswer = response[@"answer"];
+                if (questionData)
+                    isCorrect = [questionData isAnswerCorrect:studentAnswer];
+                NSLog(@"Student: %@ Answer: %@ Correct: %@",response[@"student"],response[@"answer"], isCorrect ? @"Yes" : @"No");
+                if (isCorrect)
+                    questionData.numCorrect++;
+            }
+            float percentCorrect = (float)questionData.numCorrect/questionData.numResponses;
+            questionData.percentCorrect = [NSNumber numberWithFloat:percentCorrect];
+            NSLog(@"Question #: %ld # Responses: %ld # Correct: %ld Correct: %f",questionNumber,questionData.numResponses,questionData.numCorrect,percentCorrect);
+        }
+        _questions[questionNumber++] = questionData;
     }
     uint questionCount = 0;
     for (NSNumber *correctAnswer in _correctAnswers) {
         NSLog(@"Question #: %d answer = %ld",questionCount++,[correctAnswer integerValue]);
     }
 }
+
+
 @end
