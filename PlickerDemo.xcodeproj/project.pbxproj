@@ -14,6 +14,8 @@
 		0163B1AE1B3E2E7500F267E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0163B1AD1B3E2E7500F267E6 /* Images.xcassets */; };
 		0163B1B11B3E2E7500F267E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0163B1AF1B3E2E7500F267E6 /* LaunchScreen.xib */; };
 		0163B1BD1B3E2E7500F267E6 /* PlickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1BC1B3E2E7500F267E6 /* PlickerDemoTests.m */; };
+		0163B1CC1B3E4F1300F267E6 /* NSMutableArray+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1CB1B3E4F1300F267E6 /* NSMutableArray+Utility.m */; };
+		0163B1D01B3EF52400F267E6 /* QuestionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1CF1B3EF52400F267E6 /* QuestionData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		0163B1B61B3E2E7500F267E6 /* PlickerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlickerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0163B1BB1B3E2E7500F267E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0163B1BC1B3E2E7500F267E6 /* PlickerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlickerDemoTests.m; sourceTree = "<group>"; };
+		0163B1CA1B3E4F1300F267E6 /* NSMutableArray+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Utility.h"; path = "Utility/NSMutableArray+Utility.h"; sourceTree = "<group>"; };
+		0163B1CB1B3E4F1300F267E6 /* NSMutableArray+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Utility.m"; path = "Utility/NSMutableArray+Utility.m"; sourceTree = "<group>"; };
+		0163B1CE1B3EF52400F267E6 /* QuestionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionData.h; path = Model/QuestionData.h; sourceTree = "<group>"; };
+		0163B1CF1B3EF52400F267E6 /* QuestionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionData.m; path = Model/QuestionData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 		0163B19F1B3E2E7500F267E6 /* PlickerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0163B1CD1B3EF48A00F267E6 /* Model */,
+				0163B1C61B3E4BC800F267E6 /* Utility */,
 				0163B1A41B3E2E7500F267E6 /* AppDelegate.h */,
 				0163B1A51B3E2E7500F267E6 /* AppDelegate.m */,
 				0163B1A71B3E2E7500F267E6 /* ViewController.h */,
@@ -117,6 +125,24 @@
 				0163B1BB1B3E2E7500F267E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0163B1C61B3E4BC800F267E6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0163B1CA1B3E4F1300F267E6 /* NSMutableArray+Utility.h */,
+				0163B1CB1B3E4F1300F267E6 /* NSMutableArray+Utility.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		0163B1CD1B3EF48A00F267E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0163B1CE1B3EF52400F267E6 /* QuestionData.h */,
+				0163B1CF1B3EF52400F267E6 /* QuestionData.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0163B1D01B3EF52400F267E6 /* QuestionData.m in Sources */,
+				0163B1CC1B3E4F1300F267E6 /* NSMutableArray+Utility.m in Sources */,
 				0163B1A91B3E2E7500F267E6 /* ViewController.m in Sources */,
 				0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */,
 				0163B1A31B3E2E7500F267E6 /* main.m in Sources */,
