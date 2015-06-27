@@ -28,16 +28,25 @@ const int kUnspecifiedValue = -1;
             QuestionData *questionData = [QuestionData new];
             questionData.body = question[@"body"];
             questionData.answer = kUnspecifiedValue;
+            // parse the choices for each question and identify the correct answer
             NSArray *choices = question[@"choices"];
             if (choices) {
                 for (NSUInteger i=0;i<[choices count];i++) {
                     NSDictionary *choice = choices[i];
-                    if (choice[@"correct"]) {
+                    NSNumber *isSuccessNumber = choice[@"correct"];
+                    if ([isSuccessNumber boolValue]) {
                         NSLog(@"correct choice is: %ld",i);
                         NSNumber *correctAnswer = [NSNumber numberWithUnsignedInt:(uint)i];
                         [_correctAnswers replaceObjectAtIndex:questionNumber withObject:correctAnswer];
                         questionData.answer = i;
                     }
+                }
+            }
+            NSArray *responses = question[@"responses"];
+            if (responses) {
+                for (NSDictionary *response in responses) {
+                    
+                    NSLog(@"Student: %@ Answer: %@",response[@"student"],response[@"answer"]);
                 }
             }
             _questions[questionNumber++] = questionData;

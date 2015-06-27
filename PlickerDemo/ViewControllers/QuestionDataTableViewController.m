@@ -8,6 +8,7 @@
 
 #import "QuestionDataTableViewController.h"
 #import "QuestionData.h"
+#import "QuestionDataTableViewCell.h"
 
 @interface QuestionDataTableViewController ()
 
@@ -42,10 +43,14 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    QuestionDataTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[QuestionDataTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
     if (cell) {
         QuestionData *questionData = _testData.questions[indexPath.row];
-        cell.textLabel.text = questionData.body;
+        cell.questionBody.text = questionData.body;
+        cell.questionAnswer.text = [questionData getMultipleChoiceAnswer];
     }
     return cell;
 }

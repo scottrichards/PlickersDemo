@@ -1,5 +1,5 @@
 //
-//  QuestionData.h
+//  ResponseObject.h
 //  PlickerDemo
 //
 //  Created by Scott Richards on 6/27/15.
@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface QuestionData : NSObject
+@interface ResponseObject : NSObject
 @property (strong, nonatomic) NSString *body;
-@property (assign, nonatomic) NSUInteger answer;
-
--(NSString *)getMultipleChoiceAnswer;
+@property (assign, nonatomic) NSString *answer;
+@property (assign, nonatomic) BOOL correct;
 @end
