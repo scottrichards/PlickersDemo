@@ -16,6 +16,8 @@
 		0163B1BD1B3E2E7500F267E6 /* PlickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1BC1B3E2E7500F267E6 /* PlickerDemoTests.m */; };
 		0163B1CC1B3E4F1300F267E6 /* NSMutableArray+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1CB1B3E4F1300F267E6 /* NSMutableArray+Utility.m */; };
 		0163B1D01B3EF52400F267E6 /* QuestionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1CF1B3EF52400F267E6 /* QuestionData.m */; };
+		0163B2091B3EFAB000F267E6 /* QuestionDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B2081B3EFAB000F267E6 /* QuestionDataTableViewController.m */; };
+		0163B20C1B3EFB0900F267E6 /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B20B1B3EFB0900F267E6 /* TestData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		0163B1CB1B3E4F1300F267E6 /* NSMutableArray+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Utility.m"; path = "Utility/NSMutableArray+Utility.m"; sourceTree = "<group>"; };
 		0163B1CE1B3EF52400F267E6 /* QuestionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionData.h; path = Model/QuestionData.h; sourceTree = "<group>"; };
 		0163B1CF1B3EF52400F267E6 /* QuestionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionData.m; path = Model/QuestionData.m; sourceTree = "<group>"; };
+		0163B2071B3EFAB000F267E6 /* QuestionDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionDataTableViewController.h; path = ViewControllers/QuestionDataTableViewController.h; sourceTree = "<group>"; };
+		0163B2081B3EFAB000F267E6 /* QuestionDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionDataTableViewController.m; path = ViewControllers/QuestionDataTableViewController.m; sourceTree = "<group>"; };
+		0163B20A1B3EFB0900F267E6 /* TestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestData.h; path = Model/TestData.h; sourceTree = "<group>"; };
+		0163B20B1B3EFB0900F267E6 /* TestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestData.m; path = Model/TestData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		0163B19F1B3E2E7500F267E6 /* PlickerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0163B2061B3EFA4D00F267E6 /* ViewControllers */,
 				0163B1CD1B3EF48A00F267E6 /* Model */,
 				0163B1C61B3E4BC800F267E6 /* Utility */,
 				0163B1A41B3E2E7500F267E6 /* AppDelegate.h */,
@@ -141,8 +148,19 @@
 			children = (
 				0163B1CE1B3EF52400F267E6 /* QuestionData.h */,
 				0163B1CF1B3EF52400F267E6 /* QuestionData.m */,
+				0163B20A1B3EFB0900F267E6 /* TestData.h */,
+				0163B20B1B3EFB0900F267E6 /* TestData.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0163B2061B3EFA4D00F267E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0163B2071B3EFAB000F267E6 /* QuestionDataTableViewController.h */,
+				0163B2081B3EFAB000F267E6 /* QuestionDataTableViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +268,8 @@
 				0163B1A91B3E2E7500F267E6 /* ViewController.m in Sources */,
 				0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */,
 				0163B1A31B3E2E7500F267E6 /* main.m in Sources */,
+				0163B2091B3EFAB000F267E6 /* QuestionDataTableViewController.m in Sources */,
+				0163B20C1B3EFB0900F267E6 /* TestData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
