@@ -7,6 +7,7 @@
 //
 
 #import "QuestionDataTableViewController.h"
+#import "QuestionData.h"
 
 @interface QuestionDataTableViewController ()
 
@@ -36,18 +37,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [_testData.questions count];   // TO DO implement convenience method
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (cell) {
+        QuestionData *questionData = _testData.questions[indexPath.row];
+        cell.textLabel.text = questionData.body;
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

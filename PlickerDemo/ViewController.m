@@ -10,6 +10,7 @@
 #import "NSMutableArray+Utility.h"
 #import "QuestionData.h"
 #import "TestData.h"
+#import "QuestionDataTableViewController.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) // Background thread constant for convenience
 #define kPlickersJSONData [NSURL URLWithString:@"http://plickers-interview.herokuapp.com/polls"] // link to plickers json data source
@@ -52,6 +53,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toQuestionData"]) {
+        QuestionDataTableViewController *questionDataController = [segue destinationViewController];
+        questionDataController.testData = _testData;
+    }
 }
 
 @end

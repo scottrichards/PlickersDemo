@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestData.h"
 
 @interface QuestionDataTableViewController : UITableViewController
-
+@property (strong,nonatomic) TestData *testData;
 @end

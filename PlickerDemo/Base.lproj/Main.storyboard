@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oR9-YS-h31" kind="push" id="0rO-YF-nTU"/>
+                                    <segue destination="oR9-YS-h31" kind="push" identifier="toQuestionData" id="0rO-YF-nTU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,16 +34,16 @@
             </objects>
             <point key="canvasLocation" x="480" y="272"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Question Data Table View Controller-->
         <scene sceneID="GJO-vZ-agm">
             <objects>
-                <tableViewController id="oR9-YS-h31" sceneMemberID="viewController">
+                <tableViewController id="oR9-YS-h31" customClass="QuestionDataTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jLR-Kp-XBF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hgm-JI-IZj">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="hgm-JI-IZj">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgm-JI-IZj" id="N1r-ap-s4c">
                                     <autoresizingMask key="autoresizingMask"/>
