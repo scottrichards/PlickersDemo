@@ -13,6 +13,8 @@
 #import "QuestionDataTableViewController.h"
 #import "QuestionResultsTableViewController.h"
 
+#define USE_LOCAL_DATA
+
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) // Background thread constant for convenience
 #define kPlickersJSONData [NSURL URLWithString:@"http://plickers-interview.herokuapp.com/polls"] // link to plickers json data source
 
@@ -29,8 +31,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     dispatch_async(kBgQueue, ^{
+#ifdef USE_LOCAL_DATA
+        NSString *feedBundlePath = [[NSBundle mainBundle] pathForResource:@"Feed" ofType:@"json"];
+        NSData* data = [NSData dataWithContentsOfFile:
+                        feedBundlePath];
+#else
         NSData* data = [NSData dataWithContentsOfURL:
-                        kPlickersJSONData];
+                        kPlickersLocalJSONData];
+#endif
         // TO DO don't do this on the main thread for long JSON feeds
         [self performSelectorOnMainThread:@selector(fetchedData:)
                                withObject:data waitUntilDone:YES];
@@ -43,8 +51,7 @@
     //parse out the json data
     NSError* error;
     NSArray* jsonArray = [NSJSONSerialization
-                          JSONObjectWithData:responseData //1
-                          
+                          JSONObjectWithData:responseData 
                           options:kNilOptions
                           error:&error];
     _testData = [TestData new];

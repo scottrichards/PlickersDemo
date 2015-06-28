@@ -13,6 +13,7 @@
 @interface TestData : NSObject
 @property (strong, nonatomic) NSMutableArray *correctAnswers;
 @property (strong, nonatomic) NSMutableArray *questions;
+@property (strong, nonatomic) NSMutableDictionary *students;
 
 -(void)parseJSONTestData:(NSArray *)jsonArray;
 @end

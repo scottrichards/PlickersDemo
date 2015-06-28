@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface ResponseObject : NSObject
-@property (strong, nonatomic) NSString *body;
+@property (strong, nonatomic) NSString *student;
 @property (assign, nonatomic) NSString *answer;
 @property (assign, nonatomic) BOOL correct;
 @end

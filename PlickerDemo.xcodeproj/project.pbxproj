@@ -19,9 +19,11 @@
 		0163B2091B3EFAB000F267E6 /* QuestionDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B2081B3EFAB000F267E6 /* QuestionDataTableViewController.m */; };
 		0163B20C1B3EFB0900F267E6 /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B20B1B3EFB0900F267E6 /* TestData.m */; };
 		0163B2101B3F090900F267E6 /* QuestionDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B20F1B3F090900F267E6 /* QuestionDataTableViewCell.m */; };
-		0168DBC31B3F11A700973F7F /* ResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBC21B3F11A700973F7F /* ResponseObject.m */; };
 		0168DBC61B3F21F600973F7F /* QuestionResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */; };
 		0168DBC91B3F235400973F7F /* QuestionResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBC81B3F235400973F7F /* QuestionResultsTableViewCell.m */; };
+		0168DBFE1B3F4FB100973F7F /* StudentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBFD1B3F4FB100973F7F /* StudentObject.m */; };
+		0168DC011B3F518000973F7F /* ResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DC001B3F518000973F7F /* ResponseObject.m */; };
+		0168DC061B4049B200973F7F /* Feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 0168DC051B4049B200973F7F /* Feed.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +60,15 @@
 		0163B20B1B3EFB0900F267E6 /* TestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestData.m; path = Model/TestData.m; sourceTree = "<group>"; };
 		0163B20E1B3F090900F267E6 /* QuestionDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionDataTableViewCell.h; path = TableViewCells/QuestionDataTableViewCell.h; sourceTree = "<group>"; };
 		0163B20F1B3F090900F267E6 /* QuestionDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionDataTableViewCell.m; path = TableViewCells/QuestionDataTableViewCell.m; sourceTree = "<group>"; };
-		0168DBC11B3F11A700973F7F /* ResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponseObject.h; path = Model/ResponseObject.h; sourceTree = "<group>"; };
-		0168DBC21B3F11A700973F7F /* ResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponseObject.m; path = Model/ResponseObject.m; sourceTree = "<group>"; };
 		0168DBC41B3F21F600973F7F /* QuestionResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionResultsTableViewController.h; path = ViewControllers/QuestionResultsTableViewController.h; sourceTree = "<group>"; };
 		0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionResultsTableViewController.m; path = ViewControllers/QuestionResultsTableViewController.m; sourceTree = "<group>"; };
 		0168DBC71B3F235400973F7F /* QuestionResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionResultsTableViewCell.h; path = TableViewCells/QuestionResultsTableViewCell.h; sourceTree = "<group>"; };
 		0168DBC81B3F235400973F7F /* QuestionResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionResultsTableViewCell.m; path = TableViewCells/QuestionResultsTableViewCell.m; sourceTree = "<group>"; };
+		0168DBFC1B3F4FB100973F7F /* StudentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentObject.h; path = Model/StudentObject.h; sourceTree = "<group>"; };
+		0168DBFD1B3F4FB100973F7F /* StudentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentObject.m; path = Model/StudentObject.m; sourceTree = "<group>"; };
+		0168DBFF1B3F518000973F7F /* ResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponseObject.h; path = Model/ResponseObject.h; sourceTree = "<group>"; };
+		0168DC001B3F518000973F7F /* ResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponseObject.m; path = Model/ResponseObject.m; sourceTree = "<group>"; };
+		0168DC051B4049B200973F7F /* Feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Feed.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 			children = (
 				0163B1A41B3E2E7500F267E6 /* AppDelegate.h */,
 				0163B1A51B3E2E7500F267E6 /* AppDelegate.m */,
+				0168DC051B4049B200973F7F /* Feed.json */,
 				0163B1AD1B3E2E7500F267E6 /* Images.xcassets */,
 				0163B1AF1B3E2E7500F267E6 /* LaunchScreen.xib */,
 				0163B1AA1B3E2E7500F267E6 /* Main.storyboard */,
@@ -161,8 +167,10 @@
 			children = (
 				0163B1CE1B3EF52400F267E6 /* QuestionData.h */,
 				0163B1CF1B3EF52400F267E6 /* QuestionData.m */,
-				0168DBC11B3F11A700973F7F /* ResponseObject.h */,
-				0168DBC21B3F11A700973F7F /* ResponseObject.m */,
+				0168DBFF1B3F518000973F7F /* ResponseObject.h */,
+				0168DC001B3F518000973F7F /* ResponseObject.m */,
+				0168DBFC1B3F4FB100973F7F /* StudentObject.h */,
+				0168DBFD1B3F4FB100973F7F /* StudentObject.m */,
 				0163B20A1B3EFB0900F267E6 /* TestData.h */,
 				0163B20B1B3EFB0900F267E6 /* TestData.m */,
 			);
@@ -272,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0163B1AC1B3E2E7500F267E6 /* Main.storyboard in Resources */,
+				0168DC061B4049B200973F7F /* Feed.json in Resources */,
 				0163B1B11B3E2E7500F267E6 /* LaunchScreen.xib in Resources */,
 				0163B1AE1B3E2E7500F267E6 /* Images.xcassets in Resources */,
 			);
@@ -291,11 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0168DBFE1B3F4FB100973F7F /* StudentObject.m in Sources */,
+				0168DC011B3F518000973F7F /* ResponseObject.m in Sources */,
 				0163B1D01B3EF52400F267E6 /* QuestionData.m in Sources */,
 				0163B1CC1B3E4F1300F267E6 /* NSMutableArray+Utility.m in Sources */,
 				0163B1A91B3E2E7500F267E6 /* ViewController.m in Sources */,
 				0163B2101B3F090900F267E6 /* QuestionDataTableViewCell.m in Sources */,
-				0168DBC31B3F11A700973F7F /* ResponseObject.m in Sources */,
 				0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */,
 				0168DBC91B3F235400973F7F /* QuestionResultsTableViewCell.m in Sources */,
 				0163B1A31B3E2E7500F267E6 /* main.m in Sources */,
@@ -427,9 +437,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Scott Richards (LSDP48E32L)";
 				INFOPLIST_FILE = PlickerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a8a986dd-0895-49a1-815a-483aa45e0169";
 			};
 			name = Debug;
 		};
@@ -440,6 +452,7 @@
 				INFOPLIST_FILE = PlickerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a8a986dd-0895-49a1-815a-483aa45e0169";
 			};
 			name = Release;
 		};

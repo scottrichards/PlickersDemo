@@ -9,6 +9,8 @@
 #import "TestData.h"
 #import "QuestionData.h"
 #import "NSMutableArray+Utility.h"
+#import "ResponseObject.h"
+#import "StudentObject.h"
 
 const int kUnspecifiedValue = -1;
 
@@ -48,6 +50,7 @@ const int kUnspecifiedValue = -1;
             questionData.numResponses = [responses count];
             for (NSDictionary *response in responses) {
                 BOOL isCorrect;
+                
                 NSString *studentAnswer = response[@"answer"];
                 if (questionData)
                     isCorrect = [questionData isAnswerCorrect:studentAnswer];
