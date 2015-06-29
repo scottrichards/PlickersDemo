@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0157A1AD1B40C831000DA4EC /* StudentResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0157A1AC1B40C831000DA4EC /* StudentResultsTableViewController.m */; };
 		0163B1A31B3E2E7500F267E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A21B3E2E7500F267E6 /* main.m */; };
 		0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A51B3E2E7500F267E6 /* AppDelegate.m */; };
 		0163B1A91B3E2E7500F267E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A81B3E2E7500F267E6 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0157A1AB1B40C831000DA4EC /* StudentResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentResultsTableViewController.h; path = ViewControllers/StudentResultsTableViewController.h; sourceTree = "<group>"; };
+		0157A1AC1B40C831000DA4EC /* StudentResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentResultsTableViewController.m; path = ViewControllers/StudentResultsTableViewController.m; sourceTree = "<group>"; };
 		0163B19D1B3E2E7500F267E6 /* PlickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0163B1A11B3E2E7500F267E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0163B1A21B3E2E7500F267E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				0163B2081B3EFAB000F267E6 /* QuestionDataTableViewController.m */,
 				0168DBC41B3F21F600973F7F /* QuestionResultsTableViewController.h */,
 				0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */,
+				0157A1AB1B40C831000DA4EC /* StudentResultsTableViewController.h */,
+				0157A1AC1B40C831000DA4EC /* StudentResultsTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				0163B1A91B3E2E7500F267E6 /* ViewController.m in Sources */,
 				0163B2101B3F090900F267E6 /* QuestionDataTableViewCell.m in Sources */,
 				0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */,
+				0157A1AD1B40C831000DA4EC /* StudentResultsTableViewController.m in Sources */,
 				0168DBC91B3F235400973F7F /* QuestionResultsTableViewCell.m in Sources */,
 				0163B1A31B3E2E7500F267E6 /* main.m in Sources */,
 				0163B2091B3EFAB000F267E6 /* QuestionDataTableViewController.m in Sources */,

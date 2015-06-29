@@ -21,7 +21,7 @@ const int kUnspecifiedValue = -1;
 {
     _correctAnswers = [[NSMutableArray alloc] initWithCapacity:[jsonArray count]];
     _questions = [[NSMutableArray alloc] initWithCapacity:[jsonArray count]];
-    _students = [NSMutableDictionary new];
+    _studentResponsesDictionary = [NSMutableDictionary new];
     [_correctAnswers fillArray:[jsonArray count] initialValue:@-1];      // fill array with unspecified values
     NSUInteger questionNumber = 0;
     for (NSDictionary *item in jsonArray) {
@@ -51,13 +51,22 @@ const int kUnspecifiedValue = -1;
             questionData.numResponses = [responses count];
             for (NSDictionary *response in responses) {
                 BOOL isCorrect;
-                
+                NSString *studentName = response[@"student"];
+                StudentResponses *studentResponse = _studentResponsesDictionary[studentName];
+                if (!studentResponse) {
+                    studentResponse = [StudentResponses new];
+                    studentResponse.name = studentName;
+                    _studentResponsesDictionary[studentName] = studentResponse;
+                }
                 NSString *studentAnswer = response[@"answer"];
                 if (questionData)
                     isCorrect = [questionData isAnswerCorrect:studentAnswer];
-                NSLog(@"Student: %@ Answer: %@ Correct: %@",response[@"student"],response[@"answer"], isCorrect ? @"Yes" : @"No");
-                if (isCorrect)
+                NSLog(@"Student: %@ Answer: %@ Correct: %@",studentName,response[@"answer"], isCorrect ? @"Yes" : @"No");
+                if (isCorrect) {
                     questionData.numCorrect++;
+                    studentResponse.numCorrect++;
+                }
+                studentResponse.numResponses++;
             }
             float percentCorrect = (float)questionData.numCorrect/questionData.numResponses;
             questionData.percentCorrect = [NSNumber numberWithFloat:percentCorrect];
