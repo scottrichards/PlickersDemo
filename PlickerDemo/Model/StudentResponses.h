@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StudentObject : NSObject
+@interface StudentResponses : NSObject
 @property (strong, nonatomic) NSString *name;
 @property (assign, nonatomic) NSUInteger numResponses;
 @property (assign, nonatomic) NSUInteger numCorrect;

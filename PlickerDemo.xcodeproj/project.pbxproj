@@ -21,7 +21,7 @@
 		0163B2101B3F090900F267E6 /* QuestionDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B20F1B3F090900F267E6 /* QuestionDataTableViewCell.m */; };
 		0168DBC61B3F21F600973F7F /* QuestionResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */; };
 		0168DBC91B3F235400973F7F /* QuestionResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBC81B3F235400973F7F /* QuestionResultsTableViewCell.m */; };
-		0168DBFE1B3F4FB100973F7F /* StudentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBFD1B3F4FB100973F7F /* StudentObject.m */; };
+		0168DBFE1B3F4FB100973F7F /* StudentResponses.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DBFD1B3F4FB100973F7F /* StudentResponses.m */; };
 		0168DC011B3F518000973F7F /* ResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168DC001B3F518000973F7F /* ResponseObject.m */; };
 		0168DC061B4049B200973F7F /* Feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 0168DC051B4049B200973F7F /* Feed.json */; };
 /* End PBXBuildFile section */
@@ -64,8 +64,8 @@
 		0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionResultsTableViewController.m; path = ViewControllers/QuestionResultsTableViewController.m; sourceTree = "<group>"; };
 		0168DBC71B3F235400973F7F /* QuestionResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionResultsTableViewCell.h; path = TableViewCells/QuestionResultsTableViewCell.h; sourceTree = "<group>"; };
 		0168DBC81B3F235400973F7F /* QuestionResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionResultsTableViewCell.m; path = TableViewCells/QuestionResultsTableViewCell.m; sourceTree = "<group>"; };
-		0168DBFC1B3F4FB100973F7F /* StudentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentObject.h; path = Model/StudentObject.h; sourceTree = "<group>"; };
-		0168DBFD1B3F4FB100973F7F /* StudentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentObject.m; path = Model/StudentObject.m; sourceTree = "<group>"; };
+		0168DBFC1B3F4FB100973F7F /* StudentResponses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentResponses.h; path = Model/StudentResponses.h; sourceTree = "<group>"; };
+		0168DBFD1B3F4FB100973F7F /* StudentResponses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentResponses.m; path = Model/StudentResponses.m; sourceTree = "<group>"; };
 		0168DBFF1B3F518000973F7F /* ResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponseObject.h; path = Model/ResponseObject.h; sourceTree = "<group>"; };
 		0168DC001B3F518000973F7F /* ResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponseObject.m; path = Model/ResponseObject.m; sourceTree = "<group>"; };
 		0168DC051B4049B200973F7F /* Feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Feed.json; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 				0163B1CF1B3EF52400F267E6 /* QuestionData.m */,
 				0168DBFF1B3F518000973F7F /* ResponseObject.h */,
 				0168DC001B3F518000973F7F /* ResponseObject.m */,
-				0168DBFC1B3F4FB100973F7F /* StudentObject.h */,
-				0168DBFD1B3F4FB100973F7F /* StudentObject.m */,
+				0168DBFC1B3F4FB100973F7F /* StudentResponses.h */,
+				0168DBFD1B3F4FB100973F7F /* StudentResponses.m */,
 				0163B20A1B3EFB0900F267E6 /* TestData.h */,
 				0163B20B1B3EFB0900F267E6 /* TestData.m */,
 			);
@@ -300,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0168DBFE1B3F4FB100973F7F /* StudentObject.m in Sources */,
+				0168DBFE1B3F4FB100973F7F /* StudentResponses.m in Sources */,
 				0168DC011B3F518000973F7F /* ResponseObject.m in Sources */,
 				0163B1D01B3EF52400F267E6 /* QuestionData.m in Sources */,
 				0163B1CC1B3E4F1300F267E6 /* NSMutableArray+Utility.m in Sources */,

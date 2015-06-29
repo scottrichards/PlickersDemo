@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Scott Richards. All rights reserved.
 //
 
-#import "StudentObject.h"
+#import "StudentResponses.h"
 
-@implementation StudentObject
+@implementation StudentResponses
 
 @end

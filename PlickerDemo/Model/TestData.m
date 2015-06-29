@@ -10,7 +10,7 @@
 #import "QuestionData.h"
 #import "NSMutableArray+Utility.h"
 #import "ResponseObject.h"
-#import "StudentObject.h"
+#import "StudentResponses.h"
 
 const int kUnspecifiedValue = -1;
 
@@ -21,6 +21,7 @@ const int kUnspecifiedValue = -1;
 {
     _correctAnswers = [[NSMutableArray alloc] initWithCapacity:[jsonArray count]];
     _questions = [[NSMutableArray alloc] initWithCapacity:[jsonArray count]];
+    _students = [NSMutableDictionary new];
     [_correctAnswers fillArray:[jsonArray count] initialValue:@-1];      // fill array with unspecified values
     NSUInteger questionNumber = 0;
     for (NSDictionary *item in jsonArray) {
