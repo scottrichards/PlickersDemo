@@ -56,4 +56,33 @@
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 40.0f;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    // View for the header
+    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 22)];
+    headerView.backgroundColor = [UIColor whiteColor];
+    
+    // Label for Question
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 12, 100, 18)];
+    [label setFont:[UIFont systemFontOfSize:15]];
+    label.text=@"Student";
+    label.textColor = [UIColor lightGrayColor];
+    [headerView addSubview:label];
+    
+    // Label for Percent Complete
+    UILabel *percentComplete = [[UILabel alloc] initWithFrame:CGRectMake(tableView.frame.size.width - 60, 12, 40, 18)];
+    [percentComplete setFont:[UIFont systemFontOfSize:15]];
+    percentComplete.text=@"%";
+    percentComplete.textAlignment = NSTextAlignmentRight;
+    percentComplete.textColor = [UIColor lightGrayColor];
+    [headerView addSubview:percentComplete];
+    
+    // 3. And return
+    return headerView;
+}
 @end

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0157A1AD1B40C831000DA4EC /* StudentResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0157A1AC1B40C831000DA4EC /* StudentResultsTableViewController.m */; };
 		0157A1B01B42911F000DA4EC /* StudentResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0157A1AF1B42911F000DA4EC /* StudentResultsTableViewCell.m */; };
+		0157A1B31B441B0E000DA4EC /* ChoiceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0157A1B21B441B0E000DA4EC /* ChoiceObject.m */; };
+		0157A1B61B4422AA000DA4EC /* ChoicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0157A1B51B4422AA000DA4EC /* ChoicesTableViewController.m */; };
 		0163B1A31B3E2E7500F267E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A21B3E2E7500F267E6 /* main.m */; };
 		0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A51B3E2E7500F267E6 /* AppDelegate.m */; };
 		0163B1A91B3E2E7500F267E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A81B3E2E7500F267E6 /* ViewController.m */; };
@@ -43,6 +45,10 @@
 		0157A1AC1B40C831000DA4EC /* StudentResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentResultsTableViewController.m; path = ViewControllers/StudentResultsTableViewController.m; sourceTree = "<group>"; };
 		0157A1AE1B42911F000DA4EC /* StudentResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentResultsTableViewCell.h; path = TableViewCells/StudentResultsTableViewCell.h; sourceTree = "<group>"; };
 		0157A1AF1B42911F000DA4EC /* StudentResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentResultsTableViewCell.m; path = TableViewCells/StudentResultsTableViewCell.m; sourceTree = "<group>"; };
+		0157A1B11B441B0E000DA4EC /* ChoiceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChoiceObject.h; path = Model/ChoiceObject.h; sourceTree = "<group>"; };
+		0157A1B21B441B0E000DA4EC /* ChoiceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoiceObject.m; path = Model/ChoiceObject.m; sourceTree = "<group>"; };
+		0157A1B41B4422AA000DA4EC /* ChoicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChoicesTableViewController.h; path = ViewControllers/ChoicesTableViewController.h; sourceTree = "<group>"; };
+		0157A1B51B4422AA000DA4EC /* ChoicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoicesTableViewController.m; path = ViewControllers/ChoicesTableViewController.m; sourceTree = "<group>"; };
 		0163B19D1B3E2E7500F267E6 /* PlickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0163B1A11B3E2E7500F267E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0163B1A21B3E2E7500F267E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -179,6 +185,8 @@
 				0168DBFD1B3F4FB100973F7F /* StudentResponses.m */,
 				0163B20A1B3EFB0900F267E6 /* TestData.h */,
 				0163B20B1B3EFB0900F267E6 /* TestData.m */,
+				0157A1B11B441B0E000DA4EC /* ChoiceObject.h */,
+				0157A1B21B441B0E000DA4EC /* ChoiceObject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -192,6 +200,8 @@
 				0168DBC51B3F21F600973F7F /* QuestionResultsTableViewController.m */,
 				0157A1AB1B40C831000DA4EC /* StudentResultsTableViewController.h */,
 				0157A1AC1B40C831000DA4EC /* StudentResultsTableViewController.m */,
+				0157A1B41B4422AA000DA4EC /* ChoicesTableViewController.h */,
+				0157A1B51B4422AA000DA4EC /* ChoicesTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -311,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0168DBFE1B3F4FB100973F7F /* StudentResponses.m in Sources */,
+				0157A1B31B441B0E000DA4EC /* ChoiceObject.m in Sources */,
 				0168DC011B3F518000973F7F /* ResponseObject.m in Sources */,
 				0163B1D01B3EF52400F267E6 /* QuestionData.m in Sources */,
 				0163B1CC1B3E4F1300F267E6 /* NSMutableArray+Utility.m in Sources */,
@@ -321,6 +332,7 @@
 				0157A1AD1B40C831000DA4EC /* StudentResultsTableViewController.m in Sources */,
 				0168DBC91B3F235400973F7F /* QuestionResultsTableViewCell.m in Sources */,
 				0163B1A31B3E2E7500F267E6 /* main.m in Sources */,
+				0157A1B61B4422AA000DA4EC /* ChoicesTableViewController.m in Sources */,
 				0163B2091B3EFAB000F267E6 /* QuestionDataTableViewController.m in Sources */,
 				0168DBC61B3F21F600973F7F /* QuestionResultsTableViewController.m in Sources */,
 				0163B20C1B3EFB0900F267E6 /* TestData.m in Sources */,

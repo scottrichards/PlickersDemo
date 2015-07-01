@@ -11,6 +11,7 @@
 #import "NSMutableArray+Utility.h"
 #import "ResponseObject.h"
 #import "StudentResponses.h"
+#import "ChoiceObject.h"
 
 const int kUnspecifiedValue = -1;
 
@@ -29,15 +30,19 @@ const int kUnspecifiedValue = -1;
         NSDictionary *question = item[@"question"];
         QuestionData *questionData = [QuestionData new];
         if (question) {
-            questionData.body = question[@"body"];
+            questionData.body = [NSString stringWithFormat:@"%lu. %@",questionNumber + 1,question[@"body"]];
             questionData.answer = kUnspecifiedValue;
             // parse the choices for each question and identify the correct answer
             NSArray *choices = question[@"choices"];
             if (choices) {
+                questionData.choices = [NSMutableArray new];
                 for (NSUInteger i=0;i<[choices count];i++) {
+                    ChoiceObject *choiceObject = [ChoiceObject new];
                     NSDictionary *choice = choices[i];
+                    choiceObject.body = choice[@"body"];
                     NSNumber *isSuccessNumber = choice[@"correct"];
                     if ([isSuccessNumber boolValue]) {
+                        choiceObject.correct = true;
                         NSLog(@"correct choice is: %ld",i);
                         NSNumber *correctAnswer = [NSNumber numberWithUnsignedInt:(uint)i];
                         [_correctAnswers replaceObjectAtIndex:questionNumber withObject:correctAnswer];
@@ -59,6 +64,7 @@ const int kUnspecifiedValue = -1;
                     _studentResponsesDictionary[studentName] = studentResponse;
                 }
                 NSString *studentAnswer = response[@"answer"];
+                [questionData addResponse:studentAnswer];
                 if (questionData)
                     isCorrect = [questionData isAnswerCorrect:studentAnswer];
                 NSLog(@"Student: %@ Answer: %@ Correct: %@",studentName,response[@"answer"], isCorrect ? @"Yes" : @"No");
@@ -72,7 +78,6 @@ const int kUnspecifiedValue = -1;
             questionData.percentCorrect = [NSNumber numberWithFloat:percentCorrect];
             NSLog(@"Question #: %ld # Responses: %ld # Correct: %ld Correct: %f",questionNumber,questionData.numResponses,questionData.numCorrect,percentCorrect);
         }
-       
         _questions[questionNumber++] = questionData;
     }
     uint questionCount = 0;

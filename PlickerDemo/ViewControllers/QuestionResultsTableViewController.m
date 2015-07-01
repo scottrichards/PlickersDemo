@@ -82,4 +82,9 @@
     return headerView;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"selected row: %ld",indexPath.row);
+}
+
 @end
