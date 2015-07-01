@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WvL-dk-Ko6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPP-pZ-Ldz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPP-pZ-Ldz">
                                 <rect key="frame" x="98" y="97" width="125" height="30"/>
                                 <state key="normal" title="Question Answers">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,8 +26,8 @@
                                     <segue destination="oR9-YS-h31" kind="push" identifier="toQuestionData" id="0rO-YF-nTU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r7-W5-UaI">
-                                <rect key="frame" x="100" y="135" width="121" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r7-W5-UaI">
+                                <rect key="frame" x="102" y="135" width="117" height="30"/>
                                 <state key="normal" title="Question Results">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,7 +35,7 @@
                                     <segue destination="5vm-K2-buo" kind="push" identifier="toQuestionResults" id="P2m-cG-aRJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-hC-ero">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-hC-ero">
                                 <rect key="frame" x="94" y="173" width="132" height="30"/>
                                 <state key="normal" title="Student Results">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,7 +48,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5r7-W5-UaI" firstAttribute="centerX" secondItem="dPP-pZ-Ldz" secondAttribute="centerX" id="0hG-73-2W3"/>
+                            <constraint firstItem="pxq-hC-ero" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="78" id="4Lg-4y-30L"/>
+                            <constraint firstAttribute="centerX" secondItem="pxq-hC-ero" secondAttribute="centerX" id="5pN-WM-DDF"/>
+                            <constraint firstItem="pxq-hC-ero" firstAttribute="top" secondItem="5r7-W5-UaI" secondAttribute="bottom" constant="8" symbolic="YES" id="JeK-im-Bgb"/>
                             <constraint firstAttribute="centerX" secondItem="5r7-W5-UaI" secondAttribute="centerX" id="KuM-sa-Qoa"/>
+                            <constraint firstItem="5r7-W5-UaI" firstAttribute="top" secondItem="dPP-pZ-Ldz" secondAttribute="bottom" constant="8" symbolic="YES" id="bP2-mO-wdT"/>
+                            <constraint firstItem="dPP-pZ-Ldz" firstAttribute="centerX" secondItem="pxq-hC-ero" secondAttribute="centerX" id="hcJ-g1-AOo"/>
+                            <constraint firstItem="dPP-pZ-Ldz" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="33" id="sap-Ox-TZ7"/>
                             <constraint firstAttribute="centerX" secondItem="dPP-pZ-Ldz" secondAttribute="centerX" id="wp1-jY-tbB"/>
                         </constraints>
                     </view>

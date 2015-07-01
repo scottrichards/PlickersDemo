@@ -82,6 +82,12 @@ const int kUnspecifiedValue = -1;
         StudentResponses *studentResponse = [_studentResponsesDictionary objectForKey: key];
         [_studentResults addObject:studentResponse];
     }
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"numCorrect"
+                                                 ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    _studentResults = (NSMutableArray *)[_studentResults sortedArrayUsingDescriptors:sortDescriptors];
+    
     for (NSNumber *correctAnswer in _correctAnswers) {
         NSLog(@"Question #: %d answer = %ld",questionCount++,[correctAnswer integerValue]);
     }
