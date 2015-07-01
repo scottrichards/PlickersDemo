@@ -72,9 +72,16 @@ const int kUnspecifiedValue = -1;
             questionData.percentCorrect = [NSNumber numberWithFloat:percentCorrect];
             NSLog(@"Question #: %ld # Responses: %ld # Correct: %ld Correct: %f",questionNumber,questionData.numResponses,questionData.numCorrect,percentCorrect);
         }
+       
         _questions[questionNumber++] = questionData;
     }
     uint questionCount = 0;
+    // iterate through all studentResults and add them to array
+    _studentResults = [NSMutableArray new];
+    for (NSString *key in _studentResponsesDictionary) {
+        StudentResponses *studentResponse = [_studentResponsesDictionary objectForKey: key];
+        [_studentResults addObject:studentResponse];
+    }
     for (NSNumber *correctAnswer in _correctAnswers) {
         NSLog(@"Question #: %d answer = %ld",questionCount++,[correctAnswer integerValue]);
     }

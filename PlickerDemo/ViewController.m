@@ -12,6 +12,7 @@
 #import "TestData.h"
 #import "QuestionDataTableViewController.h"
 #import "QuestionResultsTableViewController.h"
+#import "StudentResultsTableViewController.h"
 
 #define USE_LOCAL_DATA
 
@@ -71,6 +72,9 @@
     } else if ([segue.identifier isEqualToString:@"toQuestionResults"]) {
         QuestionResultsTableViewController *questionResultsController = [segue destinationViewController];
         questionResultsController.testData = _testData;
+    } else if ([segue.identifier isEqualToString:@"toStudentResults"]) {
+        StudentResultsTableViewController *studentResultsController = [segue destinationViewController];
+        studentResultsController.testData = _testData;
     }
 }
 

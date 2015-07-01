@@ -7,9 +7,11 @@
 //
 
 #import "StudentResultsTableViewController.h"
+#import "StudentResultsTableViewCell.h"
+#import "StudentResponses.h"
 
 @interface StudentResultsTableViewController ()
-
+@property (strong, nonatomic) NSNumberFormatter *percentNumberFormatter;
 @end
 
 @implementation StudentResultsTableViewController
@@ -17,11 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (!_percentNumberFormatter) {
+        _percentNumberFormatter = [NSNumberFormatter new];
+        [_percentNumberFormatter setNumberStyle:NSNumberFormatterPercentStyle];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,14 +37,21 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [_testData.studentResults count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    // Configure the cell...
+    StudentResultsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[StudentResultsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    StudentResponses *studentResponses = _testData.studentResults[indexPath.row];
+    cell.studentLabel.text = studentResponses.name;
+    NSNumber *percentCorrect = [NSNumber numberWithFloat:(float)studentResponses.numCorrect / studentResponses.numResponses];
+    NSString *percentString = [_percentNumberFormatter stringFromNumber:percentCorrect];
+    cell.results.text = percentString;
+
     
     return cell;
 }

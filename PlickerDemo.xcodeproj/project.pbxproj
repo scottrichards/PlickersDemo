@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0157A1AD1B40C831000DA4EC /* StudentResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0157A1AC1B40C831000DA4EC /* StudentResultsTableViewController.m */; };
+		0157A1B01B42911F000DA4EC /* StudentResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0157A1AF1B42911F000DA4EC /* StudentResultsTableViewCell.m */; };
 		0163B1A31B3E2E7500F267E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A21B3E2E7500F267E6 /* main.m */; };
 		0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A51B3E2E7500F267E6 /* AppDelegate.m */; };
 		0163B1A91B3E2E7500F267E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163B1A81B3E2E7500F267E6 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		0157A1AB1B40C831000DA4EC /* StudentResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentResultsTableViewController.h; path = ViewControllers/StudentResultsTableViewController.h; sourceTree = "<group>"; };
 		0157A1AC1B40C831000DA4EC /* StudentResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentResultsTableViewController.m; path = ViewControllers/StudentResultsTableViewController.m; sourceTree = "<group>"; };
+		0157A1AE1B42911F000DA4EC /* StudentResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentResultsTableViewCell.h; path = TableViewCells/StudentResultsTableViewCell.h; sourceTree = "<group>"; };
+		0157A1AF1B42911F000DA4EC /* StudentResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentResultsTableViewCell.m; path = TableViewCells/StudentResultsTableViewCell.m; sourceTree = "<group>"; };
 		0163B19D1B3E2E7500F267E6 /* PlickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0163B1A11B3E2E7500F267E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0163B1A21B3E2E7500F267E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				0163B20F1B3F090900F267E6 /* QuestionDataTableViewCell.m */,
 				0168DBC71B3F235400973F7F /* QuestionResultsTableViewCell.h */,
 				0168DBC81B3F235400973F7F /* QuestionResultsTableViewCell.m */,
+				0157A1AE1B42911F000DA4EC /* StudentResultsTableViewCell.h */,
+				0157A1AF1B42911F000DA4EC /* StudentResultsTableViewCell.m */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				0163B1CC1B3E4F1300F267E6 /* NSMutableArray+Utility.m in Sources */,
 				0163B1A91B3E2E7500F267E6 /* ViewController.m in Sources */,
 				0163B2101B3F090900F267E6 /* QuestionDataTableViewCell.m in Sources */,
+				0157A1B01B42911F000DA4EC /* StudentResultsTableViewCell.m in Sources */,
 				0163B1A61B3E2E7500F267E6 /* AppDelegate.m in Sources */,
 				0157A1AD1B40C831000DA4EC /* StudentResultsTableViewController.m in Sources */,
 				0168DBC91B3F235400973F7F /* QuestionResultsTableViewCell.m in Sources */,

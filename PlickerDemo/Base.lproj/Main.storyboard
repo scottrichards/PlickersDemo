@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPP-pZ-Ldz">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPP-pZ-Ldz">
                                 <rect key="frame" x="98" y="97" width="125" height="30"/>
                                 <state key="normal" title="Question Answers">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,13 +25,22 @@
                                     <segue destination="oR9-YS-h31" kind="push" identifier="toQuestionData" id="0rO-YF-nTU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r7-W5-UaI">
-                                <rect key="frame" x="135" y="142" width="51" height="30"/>
-                                <state key="normal" title="Results">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r7-W5-UaI">
+                                <rect key="frame" x="100" y="135" width="121" height="30"/>
+                                <state key="normal" title="Question Results">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="5vm-K2-buo" kind="push" identifier="toQuestionResults" id="P2m-cG-aRJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-hC-ero">
+                                <rect key="frame" x="94" y="173" width="132" height="30"/>
+                                <state key="normal" title="Student Results">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bJN-V4-I0g" kind="push" identifier="toStudentResults" id="xbr-Ot-ZLq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,8 +48,6 @@
                         <constraints>
                             <constraint firstItem="5r7-W5-UaI" firstAttribute="centerX" secondItem="dPP-pZ-Ldz" secondAttribute="centerX" id="0hG-73-2W3"/>
                             <constraint firstAttribute="centerX" secondItem="5r7-W5-UaI" secondAttribute="centerX" id="KuM-sa-Qoa"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5r7-W5-UaI" secondAttribute="bottom" constant="396" id="qyu-v2-PCB"/>
-                            <constraint firstItem="5r7-W5-UaI" firstAttribute="top" secondItem="dPP-pZ-Ldz" secondAttribute="bottom" constant="15" id="vEX-jX-fvT"/>
                             <constraint firstAttribute="centerX" secondItem="dPP-pZ-Ldz" secondAttribute="centerX" id="wp1-jY-tbB"/>
                         </constraints>
                     </view>
@@ -93,7 +100,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9t-jT-Mog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="1014"/>
+            <point key="canvasLocation" x="23" y="1022"/>
         </scene>
         <!--Question Results-->
         <scene sceneID="S7E-0k-85z">
@@ -148,7 +155,59 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzh-ya-BNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="525" y="1019"/>
+            <point key="canvasLocation" x="480" y="1022"/>
+        </scene>
+        <!--Student Results-->
+        <scene sceneID="W5A-8S-GwD">
+            <objects>
+                <tableViewController id="bJN-V4-I0g" customClass="StudentResultsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4em-yz-lMI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Edv-Nk-Yeu" customClass="StudentResultsTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Edv-Nk-Yeu" id="auo-0T-rZB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tse-TX-1Eu">
+                                            <rect key="frame" x="15" y="11" width="235" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="397-8s-2Ok">
+                                            <rect key="frame" x="258" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tse-TX-1Eu" firstAttribute="leading" secondItem="auo-0T-rZB" secondAttribute="leading" constant="15" id="Kyr-gr-H0U"/>
+                                        <constraint firstAttribute="trailing" secondItem="397-8s-2Ok" secondAttribute="trailing" constant="20" symbolic="YES" id="Okd-5N-BBs"/>
+                                        <constraint firstItem="397-8s-2Ok" firstAttribute="leading" secondItem="tse-TX-1Eu" secondAttribute="trailing" constant="8" id="jxK-2Y-Epq"/>
+                                        <constraint firstItem="397-8s-2Ok" firstAttribute="top" secondItem="auo-0T-rZB" secondAttribute="top" constant="11" id="lCy-0J-29x"/>
+                                        <constraint firstItem="tse-TX-1Eu" firstAttribute="top" secondItem="auo-0T-rZB" secondAttribute="top" constant="11" id="r21-To-aoI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="results" destination="397-8s-2Ok" id="8AN-p9-o7o"/>
+                                    <outlet property="studentLabel" destination="tse-TX-1Eu" id="Jel-wN-SoZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bJN-V4-I0g" id="Dan-oD-GGJ"/>
+                            <outlet property="delegate" destination="bJN-V4-I0g" id="WnZ-PU-37Y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Student Results" id="fjn-z0-i4S"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5x-eD-cwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="1022"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DY9-bT-s19">
