@@ -159,10 +159,68 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Question Results" id="hVg-iW-XfG"/>
+                    <connections>
+                        <segue destination="tNC-0I-dgP" kind="push" identifier="toChoices" id="ftz-ZF-eUJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzh-ya-BNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="1022"/>
+            <point key="canvasLocation" x="480" y="1035"/>
+        </scene>
+        <!--Choices Table View Controller-->
+        <scene sceneID="4BE-7E-fMQ">
+            <objects>
+                <tableViewController id="tNC-0I-dgP" customClass="ChoicesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KSU-4w-tVf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="HHj-Si-elQ" customClass="ChoicesTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HHj-Si-elQ" id="9ew-SN-hZD">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uga-Jb-Qjl">
+                                            <rect key="frame" x="8" y="11" width="240" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lel-Xs-tQd">
+                                            <rect key="frame" x="270" y="11" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="cU8-OM-0Wx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lel-Xs-tQd" firstAttribute="top" secondItem="9ew-SN-hZD" secondAttribute="top" constant="11" id="GL3-oQ-g8L"/>
+                                        <constraint firstAttribute="trailing" secondItem="lel-Xs-tQd" secondAttribute="trailing" constant="8" id="GZY-qu-odI"/>
+                                        <constraint firstItem="lel-Xs-tQd" firstAttribute="leading" secondItem="Uga-Jb-Qjl" secondAttribute="trailing" constant="22" id="Iv4-uq-VOy"/>
+                                        <constraint firstItem="Uga-Jb-Qjl" firstAttribute="top" secondItem="9ew-SN-hZD" secondAttribute="top" constant="11" id="Z4E-qx-BFU"/>
+                                        <constraint firstItem="Uga-Jb-Qjl" firstAttribute="leading" secondItem="9ew-SN-hZD" secondAttribute="leading" constant="8" id="vGJ-7e-1pi"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="choiceLabel" destination="Uga-Jb-Qjl" id="jpq-xQ-cm6"/>
+                                    <outlet property="percentLabel" destination="lel-Xs-tQd" id="vyY-uo-2uB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tNC-0I-dgP" id="k8V-g0-lBt"/>
+                            <outlet property="delegate" destination="tNC-0I-dgP" id="hCi-i6-pX8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="YCp-fo-sxq"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsl-9d-6Et" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="1754"/>
         </scene>
         <!--Student Results-->
         <scene sceneID="W5A-8S-GwD">

@@ -7,6 +7,8 @@
 //
 
 #import "ChoicesTableViewController.h"
+#import "ChoicesTableViewCell.h"
+#import "ChoiceObject.h"
 
 @interface ChoicesTableViewController ()
 
@@ -32,15 +34,22 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [_questionData.choices count];
 }
 
-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ChoicesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[ChoicesTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    ChoiceObject *choice = _questionData.choices[indexPath.row];
+    cell.choiceLabel.text = choice.body;
+    return cell;
+}
 
 @end

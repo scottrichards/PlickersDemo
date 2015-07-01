@@ -9,9 +9,11 @@
 #import "QuestionResultsTableViewController.h"
 #import "QuestionResultsTableViewCell.h"
 #import "QuestionData.h"
+#import "ChoicesTableViewController.h"
 
 @interface QuestionResultsTableViewController ()
 @property (strong, nonatomic) NSNumberFormatter *percentNumberFormatter;
+@property (strong, nonatomic) QuestionData *questionData;       // the selected questions questionData, when we are doing a segue to Choices
 @end
 
 @implementation QuestionResultsTableViewController
@@ -85,6 +87,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"selected row: %ld",indexPath.row);
+    _questionData = _testData.questions[indexPath.row];
+    [self performSegueWithIdentifier:@"toChoices" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toChoices"]) {
+        ChoicesTableViewController *choicesController = [segue destinationViewController];
+        choicesController.questionData = _questionData;
+    }
 }
 
 @end
