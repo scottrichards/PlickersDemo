@@ -11,4 +11,5 @@
 
 @interface ChoicesTableViewController : UITableViewController
 @property (strong,nonatomic) QuestionData *questionData;
+@property (strong, nonatomic) NSNumberFormatter *percentNumberFormatter;
 @end

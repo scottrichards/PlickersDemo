@@ -12,18 +12,6 @@
 -(NSString *)getMultipleChoiceAnswer
 {
     return [self mapAnswerToLetter:_answer];
-//    switch (_answer) {
-//        case 0 :
-//            return @"A";
-//        case 1 :
-//            return @"B";
-//        case 2 :
-//            return @"C";
-//        case 3 :
-//            return @"D";
-//        default:
-//            return @"";
-//    }
 }
 
 // map a numeric answer/choice (0-3) to a letter (A-D) e.g. 2->"C"
@@ -43,6 +31,25 @@
     }
 }
 
+// returns number of responses for the question for the choice (0-3)
+-(NSUInteger)responsesForChoice:(NSUInteger)choice
+{
+    switch (choice) {
+        case 0 :
+            return _numA;
+        case 1 :
+            return _numB;
+        case 2 :
+            return _numC;
+        case 3 :
+            return _numD;
+        default:
+            return 0;
+    }
+}
+
+// returns true if the answer is correct
+// if correct answer is "B" passing in "B" returns true
 -(BOOL)isAnswerCorrect:(NSString *)answer
 {
     return [answer isEqualToString:[self getMultipleChoiceAnswer]];

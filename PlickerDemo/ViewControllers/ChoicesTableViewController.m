@@ -19,11 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (!_percentNumberFormatter) {
+        _percentNumberFormatter = [NSNumberFormatter new];
+        [_percentNumberFormatter setNumberStyle:NSNumberFormatterPercentStyle];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +48,8 @@
     }
     ChoiceObject *choice = _questionData.choices[indexPath.row];
     cell.choiceLabel.text = choice.body;
+    float percentCorrect = (float)[_questionData responsesForChoice:indexPath.row] / [_questionData numResponses];
+    cell.percentLabel.text = [_percentNumberFormatter stringFromNumber:[NSNumber numberWithFloat:percentCorrect]];
     return cell;
 }
 

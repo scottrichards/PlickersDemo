@@ -39,7 +39,8 @@ const int kUnspecifiedValue = -1;
                 for (NSUInteger i=0;i<[choices count];i++) {
                     ChoiceObject *choiceObject = [ChoiceObject new];
                     NSDictionary *choice = choices[i];
-                    choiceObject.body = choice[@"body"];
+                    NSString *choiceString = [NSString stringWithFormat:@"%@) %@",[questionData mapAnswerToLetter:i],choice[@"body"]];
+                    choiceObject.body = choiceString;
                     NSNumber *isSuccessNumber = choice[@"correct"];
                     if ([isSuccessNumber boolValue]) {
                         choiceObject.correct = true;
@@ -48,6 +49,7 @@ const int kUnspecifiedValue = -1;
                         [_correctAnswers replaceObjectAtIndex:questionNumber withObject:correctAnswer];
                         questionData.answer = i;
                     }
+                    [questionData.choices addObject:choiceObject];
                 }
             }
         }
