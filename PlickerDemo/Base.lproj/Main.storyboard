@@ -78,19 +78,29 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgm-JI-IZj" id="N1r-ap-s4c">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-8Z-U9q">
-                                            <rect key="frame" x="13" y="11" width="228" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-8Z-U9q">
+                                            <rect key="frame" x="13" y="11" width="236" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBo-Z2-4yr">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBo-Z2-4yr">
                                             <rect key="frame" x="265" y="11" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="NEk-hH-p8j"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VBo-Z2-4yr" firstAttribute="leading" secondItem="CbA-8Z-U9q" secondAttribute="trailing" constant="16" id="LtQ-wc-2pU"/>
+                                        <constraint firstItem="CbA-8Z-U9q" firstAttribute="leading" secondItem="N1r-ap-s4c" secondAttribute="leading" constant="13" id="fpa-Nh-k4V"/>
+                                        <constraint firstItem="VBo-Z2-4yr" firstAttribute="top" secondItem="N1r-ap-s4c" secondAttribute="top" constant="11" id="lwQ-w5-N9O"/>
+                                        <constraint firstAttribute="trailing" secondItem="VBo-Z2-4yr" secondAttribute="trailing" constant="13" id="qtq-oM-m88"/>
+                                        <constraint firstItem="CbA-8Z-U9q" firstAttribute="top" secondItem="N1r-ap-s4c" secondAttribute="top" constant="11" id="rHc-7O-NQr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="questionAnswer" destination="VBo-Z2-4yr" id="Eqd-8l-0OP"/>

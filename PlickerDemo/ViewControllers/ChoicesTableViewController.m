@@ -9,12 +9,17 @@
 #import "ChoicesTableViewController.h"
 #import "ChoicesTableViewCell.h"
 #import "ChoiceObject.h"
+#import "UIColor+Utility.h"
+
+
 
 @interface ChoicesTableViewController ()
 
 @end
 
 @implementation ChoicesTableViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,6 +52,9 @@
         cell = [[ChoicesTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     ChoiceObject *choice = _questionData.choices[indexPath.row];
+    if (choice.correct) {
+        cell.backgroundColor = [UIColor colorFromHexString:@"99FF99"];
+    }
     cell.choiceLabel.text = choice.body;
     float percentCorrect = (float)[_questionData responsesForChoice:indexPath.row] / [_questionData numResponses];
     cell.percentLabel.text = [_percentNumberFormatter stringFromNumber:[NSNumber numberWithFloat:percentCorrect]];
