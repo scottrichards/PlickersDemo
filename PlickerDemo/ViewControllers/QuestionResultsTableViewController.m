@@ -88,6 +88,7 @@
 {
     NSLog(@"selected row: %ld",indexPath.row);
     _questionData = _testData.questions[indexPath.row];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self performSegueWithIdentifier:@"toChoices" sender:self];
 }
 
