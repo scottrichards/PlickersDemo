@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="480" y="272"/>
         </scene>
-        <!--Question Data-->
+        <!--Question Answers-->
         <scene sceneID="GJO-vZ-agm">
             <objects>
                 <tableViewController id="oR9-YS-h31" customClass="QuestionDataTableViewController" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                             <outlet property="delegate" destination="oR9-YS-h31" id="i6L-KG-MqD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Question Data" id="WTO-PB-Hlw"/>
+                    <navigationItem key="navigationItem" title="Question Answers" id="WTO-PB-Hlw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9t-jT-Mog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,7 +177,7 @@
             </objects>
             <point key="canvasLocation" x="480" y="1035"/>
         </scene>
-        <!--Choices Table View Controller-->
+        <!--Choices-->
         <scene sceneID="4BE-7E-fMQ">
             <objects>
                 <tableViewController id="tNC-0I-dgP" customClass="ChoicesTableViewController" sceneMemberID="viewController">
@@ -226,7 +226,7 @@
                             <outlet property="delegate" destination="tNC-0I-dgP" id="hCi-i6-pX8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="YCp-fo-sxq"/>
+                    <navigationItem key="navigationItem" title="Choices" id="YCp-fo-sxq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsl-9d-6Et" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
