@@ -71,7 +71,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 12, 100, 18)];
     [label setFont:[UIFont systemFontOfSize:15]];
     label.text=@"Student";
-    label.textColor = [UIColor lightGrayColor];
+    label.textColor = [UIColor darkGrayColor];
     [headerView addSubview:label];
     
     // Label for Percent Complete
@@ -79,7 +79,7 @@
     [percentComplete setFont:[UIFont systemFontOfSize:15]];
     percentComplete.text=@"%";
     percentComplete.textAlignment = NSTextAlignmentRight;
-    percentComplete.textColor = [UIColor lightGrayColor];
+    percentComplete.textColor = [UIColor darkGrayColor];
     [headerView addSubview:percentComplete];
     
     // 3. And return

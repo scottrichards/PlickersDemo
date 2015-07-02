@@ -14,7 +14,7 @@
 #import "QuestionResultsTableViewController.h"
 #import "StudentResultsTableViewController.h"
 
-#define USE_LOCAL_DATA
+//#define USE_LOCAL_DATA
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) // Background thread constant for convenience
 #define kPlickersJSONData [NSURL URLWithString:@"http://plickers-interview.herokuapp.com/polls"] // link to plickers json data source
@@ -34,30 +34,21 @@
     dispatch_async(kBgQueue, ^{
 #ifdef USE_LOCAL_DATA
         NSString *feedBundlePath = [[NSBundle mainBundle] pathForResource:@"Feed" ofType:@"json"];
-        NSData* data = [NSData dataWithContentsOfFile:
-                        feedBundlePath];
+        NSData* data = [NSData dataWithContentsOfFile:feedBundlePath];
 #else
-        NSData* data = [NSData dataWithContentsOfURL:
-                        kPlickersLocalJSONData];
+        NSData* data = [NSData dataWithContentsOfURL:kPlickersJSONData];
 #endif
-        // TO DO don't do this on the main thread for long JSON feeds
-        [self performSelectorOnMainThread:@selector(fetchedData:)
-                               withObject:data waitUntilDone:YES];
+        NSError* error;
+        NSArray* jsonArray = [NSJSONSerialization
+                              JSONObjectWithData:data
+                              options:kNilOptions
+                              error:&error];
+        _testData = [TestData new];
+        [_testData parseJSONTestData:jsonArray];
     });
 }
 
 
-
-- (void)fetchedData:(NSData *)responseData {
-    //parse out the json data
-    NSError* error;
-    NSArray* jsonArray = [NSJSONSerialization
-                          JSONObjectWithData:responseData 
-                          options:kNilOptions
-                          error:&error];
-    _testData = [TestData new];
-    [_testData parseJSONTestData:jsonArray];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -66,6 +57,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     if ([segue.identifier isEqualToString:@"toQuestionData"]) {
         QuestionDataTableViewController *questionDataController = [segue destinationViewController];
         questionDataController.testData = _testData;
