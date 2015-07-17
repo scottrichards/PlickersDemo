@@ -9,7 +9,6 @@
 #import "TestData.h"
 #import "QuestionData.h"
 #import "NSMutableArray+Utility.h"
-#import "ResponseObject.h"
 #import "StudentResponses.h"
 #import "ChoiceObject.h"
 
