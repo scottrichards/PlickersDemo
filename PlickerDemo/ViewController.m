@@ -25,12 +25,20 @@
 @property (strong, nonatomic) TestData *testData;
 @property (strong, nonatomic) NSMutableArray *correctAnswers;
 @property (strong, nonatomic) NSMutableArray *questions;
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    _activityIndicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+    _activityIndicator.center = self.view.center;
+    [self.view addSubview:_activityIndicator];
+    [_activityIndicator startAnimating];
+    
     dispatch_async(kBgQueue, ^{
 #ifdef USE_LOCAL_DATA
         NSString *feedBundlePath = [[NSBundle mainBundle] pathForResource:@"Feed" ofType:@"json"];
@@ -45,9 +53,16 @@
                               error:&error];
         _testData = [TestData new];
         [_testData parseJSONTestData:jsonArray];
+        [self performSelectorOnMainThread:@selector(stopAnimation) withObject:nil waitUntilDone:0];
     });
 }
 
+- (void)stopAnimation
+{
+    [_activityIndicator stopAnimating];
+    [_activityIndicator setHidden:YES];
+    [_activityIndicator removeFromSuperview];
+}
 
 
 - (void)didReceiveMemoryWarning {

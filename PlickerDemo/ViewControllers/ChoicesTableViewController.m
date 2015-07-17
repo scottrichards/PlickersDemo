@@ -104,10 +104,11 @@
     [headerView addSubview:label];
     
     // Label for Percent Complete
-    UILabel *percentComplete = [[UILabel alloc] initWithFrame:CGRectMake(tableView.frame.size.width - 60, labelHeight + 20, 60, 18)];
+    UILabel *percentComplete = [[UILabel alloc] initWithFrame:CGRectMake(tableView.frame.size.width - 70, labelHeight + 20, 60, 18)];
     [percentComplete setFont:[UIFont systemFontOfSize:15]];
     percentComplete.text=@"%";
     percentComplete.textColor = [UIColor darkGrayColor];
+    percentComplete.textAlignment = NSTextAlignmentRight;
     [headerView addSubview:percentComplete];
     
     return headerView;
